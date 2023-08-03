@@ -1,6 +1,6 @@
-export const createHomePage = (target) => {
+export const createHomePage = () => {
 
-    const createHeader = (() => {
+    const headerCreator = () => {
         const header = document.createElement('div');
         header.classList.add('header');
 
@@ -28,14 +28,10 @@ export const createHomePage = (target) => {
     
         const contactButton = createButton('Contact');
 
-        return {
-            header,
-            menuButton,
-            contactButton
-            };
-    })();
+        return header;
+    };
 
-    const mainCreator = (() => {
+    const mainCreator = () => {
         const main = document.createElement('div');
         main.classList.add('main');
 
@@ -56,8 +52,8 @@ export const createHomePage = (target) => {
         greetingMessage.appendChild(paraSecond);
 
         const greetingPhoto = document.createElement('img');
-        greetingPhoto.src = './bar-photo.jpg';
         greetingPhoto.alt = 'photo of dish';
+        greetingPhoto.id = 'home-page-photo'
         greetingMessage.appendChild(greetingPhoto);
 
         const paraThird = document.createElement("p");
@@ -67,9 +63,9 @@ export const createHomePage = (target) => {
         main.appendChild(greetingMessage);
 
         return main;
-    })();
+    };
 
-    const footerCreator = (() => {
+    const footerCreator = () => {
         const footer = document.createElement('div');
         footer.classList.add('footer');
 
@@ -88,13 +84,15 @@ export const createHomePage = (target) => {
         footer.appendChild(footerMessage);
 
         return footer;
-    })();
+    };
 
-    target.appendChild(header);
-    target.appendChild(main);
-    target.appendChild(footer);
+    const header = headerCreator();
+    const main = mainCreator();
+    const footer = footerCreator();
+
     return {
-        menuButton,
-        contactButton
+        footer,
+        main,
+        header
     }
 }
