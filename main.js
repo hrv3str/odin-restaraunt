@@ -120,13 +120,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHomePage: () => (/* binding */ createHomePage)\n/* harmony export */ });\nconst createHomePage = () => {\n\n    const headerCreator = () => {\n        const header = document.createElement('div');\n        header.classList.add('header');\n\n        const hero = document.createElement('h1');\n        hero.classList.add('hero');\n        hero.textContent = 'Sunny Side Café Shenanigans';\n        header.appendChild(hero);\n\n        const createButton = (textContent) => {\n        const button = document.createElement('button');\n        button.classList.add('button');\n        button.textContent = textContent;\n        header.appendChild(button);\n        return button;\n        };\n\n        const underLine = (target) => {\n            target.classList.add('underline')\n        };    \n\n        const homeButton = createButton('Home');\n        underLine(homeButton);\n    \n        const menuButton = createButton('Menu');\n    \n        const contactButton = createButton('Contact');\n\n        return header;\n    };\n\n    const mainCreator = () => {\n        const main = document.createElement('div');\n        main.classList.add('main');\n\n        const greetingMessage = document.createElement('div');\n        greetingMessage.classList.add('greeting');\n\n        const paraFirst = document.createElement('p');\n        paraFirst.textContent = 'First to';\n        greetingMessage.appendChild(paraFirst);\n\n        const spanTitle = document.createElement('span');\n        spanTitle.textContent = 'Sunny Side Café Shenanigans'\n        spanTitle.classList.add('title');\n        greetingMessage.appendChild(spanTitle);\n\n        const paraSecond = document.createElement('p');\n        paraSecond.textContent = \"Where every meal is served with a side of sunshine and a sprinkle of laughter. Come in, relax, and let the good times roll as we serve up delicious delights and heartwarming memories. From our kitchen to your table, it's all about the joy of sharing moments and savoring flavors. Embrace the sunny side of life with every bite and every sip. We're thrilled to have you here!\";\n        greetingMessage.appendChild(paraSecond);\n\n        const greetingPhoto = document.createElement('img');\n        greetingPhoto.alt = 'photo of dish';\n        greetingPhoto.id = 'home-page-photo'\n        greetingMessage.appendChild(greetingPhoto);\n\n        const paraThird = document.createElement(\"p\");\n        paraThird.textContent = 'Visit us or order the delivery';\n        greetingMessage.appendChild(paraThird);\n        \n        main.appendChild(greetingMessage);\n\n        return main;\n    };\n\n    const footerCreator = () => {\n        const footer = document.createElement('div');\n        footer.classList.add('footer');\n\n        const footerMessage = document.createElement('p');\n        footerMessage.textContent = '2023 Coded by hrv3str';\n\n        const gitLink = document.createElement('a');\n        gitLink.href = 'https://github.com/hrv3str';\n        gitLink.target = '_blank'\n\n        const gitIcon = document.createElement('span');\n        gitIcon.classList.add('git-logo');\n\n        gitLink.appendChild(gitIcon);\n        footerMessage.appendChild(gitLink);\n        footer.appendChild(footerMessage);\n\n        return footer;\n    };\n\n    const header = headerCreator();\n    const main = mainCreator();\n    const footer = footerCreator();\n\n    return {\n        footer,\n        main,\n        header\n    }\n}\n\n//# sourceURL=webpack://y/./src/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\n//# sourceURL=webpack://y/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _bar_photo_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bar-photo.jpg */ \"./src/bar-photo.jpg\");\n\n\n\n\nconst content = () => {\n    const content = document.createElement('div');\n    content.id = 'content';\n\n    const sections = (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.createHomePage)();\n\n    content.appendChild(sections.header);\n    content.appendChild(sections.main);\n    content.appendChild(sections.footer);\n\n    console.log(content);\n\n    return content;\n};\n\n    document.body.appendChild(content());\n\nconst homePageImage = document.getElementById('home-page-photo');\nhomePageImage.src = _bar_photo_jpg__WEBPACK_IMPORTED_MODULE_2__;\n\n\n\n//# sourceURL=webpack://y/./src/index.js?");
 
 /***/ }),
 
@@ -157,6 +167,16 @@ eval("module.exports = __webpack_require__.p + \"2d087b545bf495f3d86d.ttf\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"4b62e6b3699ea892c053.jpg\";\n\n//# sourceURL=webpack://y/./src/background.jpg?");
+
+/***/ }),
+
+/***/ "./src/bar-photo.jpg":
+/*!***************************!*\
+  !*** ./src/bar-photo.jpg ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"dfea8d72bb97eddbbdcb.jpg\";\n\n//# sourceURL=webpack://y/./src/bar-photo.jpg?");
 
 /***/ }),
 
