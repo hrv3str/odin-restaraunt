@@ -67,10 +67,6 @@ body {
     text-shadow: 0 0 5px var(--c-fifth);
 }
 
-.underline {
-    text-decoration: underline;
-}
-
 .button:nth-of-type(1) {
     grid-column: 2 / 3;
 }
@@ -88,6 +84,16 @@ body {
     transition: 100ms ease-out;
     cursor: pointer;
 }
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.underline:hover {
+    cursor: default;
+}
+
 
 .footer {
     justify-content: center;

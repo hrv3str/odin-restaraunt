@@ -1,41 +1,39 @@
 import './styles.css';
 import { createHomeContent } from './home.js';
 import { createFrame } from './frame.js';
-import Image from './bar-photo.jpg';
+import Image from './bar-photo.jpg'; 
 
-const underLine = (target) => {
-    target.classList.add('underline')
-};  
-
-const content = () => {
-    const content = document.getElementById('content');
+const frame = (() => {
+    const underLine = (target) => {
+        target.classList.add('underline')
+    }; 
 
     const sections = createFrame();
 
-    const mainContent = document.createElement('div');
-    mainContent.id = 'main-content';
+    const main = document.createElement('div');
+    main.classList.add('main');
+    main.id = 'main'
 
     content.appendChild(sections.header);
-    content.appendChild(mainContent);
+    content.appendChild(main);
     content.appendChild(sections.footer);
 
-    console.log(content);
+    return {
+        underLine
+    }
+})();
 
-    return content;
-};
 
-document.body.appendChild(content());
-
-const mainContent = document.getElementById('main-content');
+const main = document.getElementById('main');
 
 const homePageContent = createHomeContent();
-mainContent.appendChild(homePageContent);
+main.appendChild(homePageContent);
 
 const homeButton = document.getElementById('home');
 const menuButton = document.getElementById("menu");
 const contactButton = document.getElementById('contact');
 
-underLine(homeButton);
+frame.underLine(homeButton);
 
 const homePageImage = document.getElementById('home-page-photo');
 homePageImage.src = Image;

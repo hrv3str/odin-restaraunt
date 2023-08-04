@@ -1,7 +1,4 @@
 export const createHomeContent = () => {
-    const main = document.createElement('div');
-    main.classList.add('main');
-
     const greetingMessage = document.createElement('div');
     greetingMessage.classList.add('greeting');
 
@@ -27,7 +24,5 @@ export const createHomeContent = () => {
     paraThird.textContent = 'Visit us or order the delivery';
     greetingMessage.appendChild(paraThird);
     
-    main.appendChild(greetingMessage);
-
-    return main;
+    return greetingMessage;
 }
