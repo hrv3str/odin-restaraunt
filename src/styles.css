@@ -122,10 +122,13 @@ a:hover {
     font-family: var(--f-regular);
     color: var(--c-second);
     text-shadow: 0 0 5px var(--c-fifth);
-    height: calc(100vh - (152px + 56px));
+    height: fit-content;
+    min-height: calc(100vh - (152px + 56px));
+    margin: 3rem auto
 }
 
-.greeting {
+.greeting,
+.menu {
     width: 30vw;
     height: auto;
     background-color: var(--c-fifth-tr);
@@ -138,9 +141,13 @@ a:hover {
     text-align: center;
 }
 
-.title {
+.title,
+h2 {
     font-family: var(--f-handwritten);
     color: var(--c-third);
+}
+
+.title {
     font-size: 2em;
     padding: 0 0.15em;
 }
@@ -152,4 +159,29 @@ a:hover {
     border-radius: 1rem;
     margin: 0 auto;
     box-shadow: 0 0 3px var(--c-fifth);
+}
+
+h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h3,
+.price {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--c-first);
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.price {
+    position: relative;
+    left: 35%;
+}
+
+.price::before {
+    content: "Price: $";
 }

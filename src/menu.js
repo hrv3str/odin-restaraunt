@@ -7,7 +7,7 @@ export const createMenuContent = () => {
     menu.appendChild(title);
 
     const subTitleBeverage = document.createElement('h2');
-    subTitleBeverage.textContent = 'Beverages';
+    subTitleBeverage.textContent = 'Beverages:';
     menu.appendChild(subTitleBeverage);
 
     const createDishCard = (name, description, dishPrice) => {
@@ -38,13 +38,13 @@ export const createMenuContent = () => {
     }
 
     const smoothieTitle = 'Mint Smoothie';
-    const smoothieDesc = 'Cool Mint Dream Smoothie\n    Experience a refreshing escape with our Cool Mint Dream Smoothie. This invigorating blend combines fresh mint, creamy yogurt, ripe bananas, and a touch of honey for natural sweetness. Sip your way to rejuvenation and savor the minty delight that uplifts your day.';
+    const smoothieDesc = 'Experience a refreshing escape with our Cool Mint Dream Smoothie. This invigorating blend combines fresh mint, creamy yogurt, ripe bananas, and a touch of honey for natural sweetness. Sip your way to rejuvenation and savor the minty delight that uplifts your day.';
     const smooothiePrice = '4';
 
     createDishCard(smoothieTitle, smoothieDesc, smooothiePrice);
 
     const raspberryTeaTitle = 'Raspberry Tea';
-    const raspberryTeaDesc = 'Raspberry Bliss Tea\n Delight in the vibrant flavors of our Raspberry Bliss Tea. Experience the natural sweetness and tanginess of ripe raspberries infused into every sip. A refreshing and invigorating choice that captures the essence of summer in a cup. Enjoy a moment of pure fruity indulgence.\n Available Hot or Iced';
+    const raspberryTeaDesc = 'Delight in the vibrant flavors of our Raspberry Bliss Tea. Experience the natural sweetness and tanginess of ripe raspberries infused into every sip. A refreshing and invigorating choice that captures the essence of summer in a cup. Enjoy a moment of pure fruity indulgence.';
     const raspberryTeaPrice = '2.50';
 
     createDishCard(raspberryTeaTitle, raspberryTeaDesc, raspberryTeaPrice);
