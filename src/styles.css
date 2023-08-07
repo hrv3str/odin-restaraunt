@@ -132,7 +132,6 @@ a:hover {
 
 .greeting,
 .menu {
-    width: 30vw;
     height: auto;
     background-color: var(--c-fifth-tr);
     border: 1px solid var(--c-fifth);
@@ -142,6 +141,14 @@ a:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.greeting {
+    width: 30vw;
+}
+
+.menu {
+    width: 45vw;
 }
 
 .title,
@@ -155,13 +162,31 @@ h2 {
     padding: 0 0.15em;
 }
 
-.greeting > img {
+.greeting > img,
+.menu-image {
     height: auto;
     width: 70%;
     border: 1px solid var(--c-fifth);
     border-radius: 1rem;
     margin: 0 auto;
     box-shadow: 0 0 3px var(--c-fifth);
+}
+
+.dish-card {
+    display: grid;
+    grid-template-areas:
+    'title title'
+    'photo text'
+    'photo text'
+    'photo price';
+}
+
+.menu-title {
+    grid-area: title;
+}
+
+.menu-image {
+    grid-area: photo;
 }
 
 h2 {
@@ -181,8 +206,11 @@ h3 {
 }
 
 .price {
-    position: relative;
-    left: 35%;
+    grid-area: price;
+}
+
+.menu-text {
+    grid-area: text;
 }
 
 .price::before {

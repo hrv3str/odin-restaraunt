@@ -1,3 +1,5 @@
+import homeBarPhoto from './bar-photo.jpg';
+
 export const createHomeContent = () => {
     const greetingMessage = document.createElement('div');
     greetingMessage.classList.add('greeting');
@@ -17,7 +19,7 @@ export const createHomeContent = () => {
 
     const greetingPhoto = document.createElement('img');
     greetingPhoto.alt = 'photo of dish';
-    greetingPhoto.id = 'home-page-photo'
+    greetingPhoto.src = homeBarPhoto;
     greetingMessage.appendChild(greetingPhoto);
 
     const paraThird = document.createElement("p");

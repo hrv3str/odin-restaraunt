@@ -2,7 +2,6 @@ import './styles.css';
 import { createHomeContent } from './home.js';
 import { createFrame } from './frame.js';
 import { createMenuContent } from './menu.js'
-import Image from './bar-photo.jpg'; 
 
 const frame = (() => {
     const underLine = (target) => {
@@ -31,7 +30,6 @@ const frame = (() => {
 
 
 const main = document.getElementById('main');
-
 const homePageContent = createHomeContent();
 const menuPageContent = createMenuContent();
 
@@ -40,9 +38,6 @@ main.appendChild(homePageContent);
 const homeButton = document.getElementById('home');
 const menuButton = document.getElementById("menu");
 const contactButton = document.getElementById('contact');
-
-const homePageImage = document.getElementById('home-page-photo');
-homePageImage.src = Image;
 
 const handleButtons = (event) => {
     const button = event.target;
