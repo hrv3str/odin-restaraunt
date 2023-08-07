@@ -21,6 +21,9 @@
 
 body {
     background: url(./background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
     margin: 0;
 }
 
