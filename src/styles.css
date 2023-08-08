@@ -131,7 +131,8 @@ a:hover {
 }
 
 .greeting,
-.menu {
+.menu,
+.contact {
     height: auto;
     background-color: var(--c-fifth-tr);
     border: 1px solid var(--c-fifth);
@@ -147,7 +148,8 @@ a:hover {
     width: 30vw;
 }
 
-.menu {
+.menu,
+.contact {
     width: 45vw;
 }
 
@@ -215,4 +217,10 @@ h3 {
 
 .price::before {
     content: "Price: $";
+}
+
+.icon {
+    height: 1em;
+    width: auto;
+    margin: 0 0.5em;
 }

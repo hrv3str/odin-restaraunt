@@ -1,7 +1,8 @@
 import './styles.css';
 import { createHomeContent } from './home.js';
 import { createFrame } from './frame.js';
-import { createMenuContent } from './menu.js'
+import { createMenuContent } from './menu.js';
+import { createContactContent } from './contact.js';
 
 const frame = (() => {
     const underLine = (target) => {
@@ -32,6 +33,7 @@ const frame = (() => {
 const main = document.getElementById('main');
 const homePageContent = createHomeContent();
 const menuPageContent = createMenuContent();
+const contactPageContent = createContactContent();
 
 main.appendChild(homePageContent);
 
